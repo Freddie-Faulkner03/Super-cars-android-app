@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main6Activity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tires" />
+
+    <TextView
+        android:id="@+id/txtTitle2"
+        android:layout_width="405dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/super_cars"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFirstName"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="47dp"
+        android:background="#FFFFFF"
+        android:text="First Name: "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtLastName"
+        app:layout_constraintStart_toStartOf="@+id/txtLastName"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
+
+    <TextView
+        android:id="@+id/txtLastName"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="7dp"
+        android:background="#FFFFFF"
+        android:text="Last Name: "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtEmail"
+        app:layout_constraintStart_toStartOf="@+id/txtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/txtFirstName" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        android:text="Email: "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtUsername"
+        app:layout_constraintStart_toStartOf="@+id/txtUsername"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastName" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        android:text="Username: "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtHighScore"
+        app:layout_constraintStart_toStartOf="@+id/txtHighScore"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmail" />
+
+    <TextView
+        android:id="@+id/txtHighScore"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="9dp"
+        android:background="#FFFFFF"
+        android:text="HighScore: "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtUsername" />
+
+    <Button
+        android:id="@+id/btnChangeUn"
+        android:layout_width="189dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="92dp"
+        android:text="Change Username"
+        android:onClick="changeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHighScore"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="189dp"
+        android:layout_height="57dp"
+        android:text="Change Password"
+        android:onClick="changeText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnChangeEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnChangeEmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnChangeEmail"
+        android:layout_width="189dp"
+        android:layout_height="57dp"
+        android:text="Change Email"
+        android:onClick="changeText"
+        app:layout_constraintEnd_toEndOf="@+id/btnChangeUn"
+        app:layout_constraintStart_toStartOf="@+id/btnChangeUn"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeUn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

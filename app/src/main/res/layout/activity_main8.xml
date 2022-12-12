@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main8Activity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tires" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="341dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:textColor="#44DAB9"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="338dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:text="Type in old password then the new password twice"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <EditText
+        android:id="@+id/txtOldPassword"
+        android:layout_width="365dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:background="#FBFBFB"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/txtChange"
+        android:layout_width="365dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/txtOldPassword"
+        app:layout_constraintStart_toStartOf="@+id/txtOldPassword"
+        app:layout_constraintTop_toBottomOf="@+id/txtOldPassword" />
+
+    <EditText
+        android:id="@+id/txtConfirmChange"
+        android:layout_width="365dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textColor="#050505"
+        app:layout_constraintEnd_toEndOf="@+id/txtChange"
+        app:layout_constraintStart_toStartOf="@+id/txtChange"
+        app:layout_constraintTop_toBottomOf="@+id/txtChange" />
+
+    <Button
+        android:id="@+id/btnChange"
+        android:layout_width="158dp"
+        android:layout_height="76dp"
+        android:text="Change"
+        android:onClick="updateDb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtConfirmChange"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <TextView
+        android:id="@+id/txtError"
+        android:layout_width="303dp"
+        android:layout_height="48dp"
+        android:background="#FFFFFF"
+        android:textColor="#FF0000"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChange"
+        app:layout_constraintVertical_bias="0.205" />
+</androidx.constraintlayout.widget.ConstraintLayout>

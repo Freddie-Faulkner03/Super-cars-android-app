@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main5Activity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tires" />
+
+    <TextView
+        android:id="@+id/txtChoice"
+        android:layout_width="175dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/txtCpuCards"
+        app:layout_constraintHorizontal_bias="0.722"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPlayerCards"
+        android:layout_width="175dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCpuCards"
+        android:layout_width="175dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="592dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSound"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="sound"
+        android:text="@string/mute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnTopSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Top Speed"
+        android:onClick="setChoice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEngineSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Engine Size"
+        android:onClick="setChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/btnTopSpeed"
+        app:layout_constraintStart_toEndOf="@+id/btnTopSpeed" />
+
+    <Button
+        android:id="@+id/btnCoolFactor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Cool Factor"
+        android:onClick="setChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/btnEngineSize"
+        app:layout_constraintStart_toEndOf="@+id/btnEngineSize" />
+
+    <Button
+        android:id="@+id/btnInnovation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Inovation"
+        android:onClick="setChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCoolFactor"
+        app:layout_constraintStart_toEndOf="@+id/btnCoolFactor" />
+
+    <Button
+        android:id="@+id/btnYearLaunched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Year Launched"
+        android:onClick="setChoice"
+        app:layout_constraintBottom_toBottomOf="@+id/btnInnovation"
+        app:layout_constraintStart_toEndOf="@+id/btnInnovation"
+        tools:ignore="OnClick" />
+
+    <ImageView
+        android:id="@+id/playerCardView"
+        android:layout_width="212dp"
+        android:layout_height="237dp"
+        android:layout_marginStart="112dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <ImageView
+        android:id="@+id/computerCardView"
+        android:layout_width="212dp"
+        android:layout_height="237dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playerCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        android:onClick="nextRound"
+        app:layout_constraintBottom_toTopOf="@+id/btnSound"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/computerCardView"
+        app:layout_constraintTop_toBottomOf="@+id/txtCpuCards"
+        tools:ignore="OnClick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
