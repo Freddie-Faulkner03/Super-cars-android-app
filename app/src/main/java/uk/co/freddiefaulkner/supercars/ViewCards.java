@@ -12,6 +12,7 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class ViewCards extends AppCompatActivity {
+    // declares variables used for objects on the form
     ImageView imageView;
     TextView textView;
     LinkedList<Card> cards = new LinkedList<>();
@@ -24,13 +25,16 @@ public class ViewCards extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_cards);
 
+        // sets up the media player for background music
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.i);
         mediaPlayer.start();
         mediaPlayer.setLooping(true);
 
+        // sets up the image view and textbox for the card
         imageView = findViewById(R.id.imageView9);
         textView = findViewById(R.id.txtName);
 
+        // instances of the cards
         Card JAG_XJ220 = new Card("Jaguar XJ220", R.drawable.jaguar_xj220, 220, 3.5, 40, 8, 1992);
         Card KOEN_CCX = new Card("Koenigsegg CCX", R.drawable.koenigsegg_ccx, 273, 5.0, 41, 4, 2006);
         Card LAFERRARI = new Card("Laferrari", R.drawable.laferrari, 217, 6.3, 36, 10, 2013);
@@ -62,6 +66,7 @@ public class ViewCards extends AppCompatActivity {
         Card CHE_COR = new Card("Chevrolet Corvette", R.drawable.chevrolet_corvette, 190, 6.2, 24, 8, 1953);
         Card FER_458 = new Card("Ferrari 458", R.drawable.ferrari_458, 202, 4.5, 46, 7, 2009);
 
+        // adding the cards to the linkedlist
         cards.add(JAG_XJ220);
         cards.add(KOEN_CCX);
         cards.add(LAFERRARI);
@@ -93,13 +98,17 @@ public class ViewCards extends AppCompatActivity {
         cards.add(CHE_COR);
         cards.add(FER_458);
 
+        // sets up the list iterator to move through the list
         iterator1 = cards.listIterator();
+        // shows the image of the card
         imageView.setImageResource(iterator1.next().getImage());
+        // sets up the text for the cards
         iterator1.previous();
         textView.setText(iterator1.next().getName());
 
     }
 
+    // function used to iterate through the list of cards if user wants to see all playing cards
     public void moveCard(View view) {
         switch (view.getId()){
             case R.id.btnNext:
@@ -132,6 +141,7 @@ public class ViewCards extends AppCompatActivity {
         }
     }
 
+    // checks the sound to see if it is on or not and will mute or unmute depending on if playing or not
     public void sound(View view) {
         if(!soundOn){
             mediaPlayer.start();
@@ -143,6 +153,7 @@ public class ViewCards extends AppCompatActivity {
         }
     }
 
+    // function used to restart form if navigated back
     @Override
     protected void onRestart() {
         super.onRestart();
@@ -151,6 +162,7 @@ public class ViewCards extends AppCompatActivity {
         mediaPlayer.setLooping(true);
     }
 
+    // function used to destroy the form if navigated away
     @Override
     protected void onDestroy() {
         super.onDestroy();
